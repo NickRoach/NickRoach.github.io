@@ -369,7 +369,7 @@ gsap.fromTo(
         width: 400,
         height: 400,
         opacity: 1,
-        x: "-50%",
+        x: "-53%",
         y: "-55%",
         // y: +24,
     }

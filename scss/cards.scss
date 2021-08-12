@@ -144,6 +144,24 @@ p {
     box-shadow: rgba(255, 255, 255, 0.856);
 }
 
+.copy {
+    width: 26px;
+    box-shadow: rgba(255, 255, 255, 0.856);
+    margin-left: 20px;
+}
+
+.copyDeets {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#myinput {
+    display: none;
+}
+
 .item {
     @extend %flexSetup;
     font-family: Arial;

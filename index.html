@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="./css/navbar.css" />
         <link rel="stylesheet" href="./css/cards.css" />
         <link rel="stylesheet" href="./css/body.css" />
+        <link rel="stylesheet" href="./css/tooltip.css" />
         <link rel="shortcut icon" type="image/ico" href="./favicon.ico" />
 
         <title>Nick Roach: Software Engineer</title>
@@ -58,6 +59,7 @@
         ></script>
         <script src="./scripts/wormhole.js" defer></script>
         <script src="./scripts/cards.js" defer></script>
+        <script src="./scripts/clipboardCopy.js" defer></script>
         <script
             src="https://kit.fontawesome.com/d3e8476aea.js"
             crossorigin="anonymous"
@@ -250,11 +252,26 @@
             <div class="contactContainer">
                 <p>
                     If I would be a good fit for your team please get in contact
+                    by email
                 </p>
-                <p>njlroach@gmail.com</p>
+
+                <div class="tooltip">
+                    <div
+                        class="copyDeets"
+                        onclick="myFunction()"
+                        onmouseout="outFunc()"
+                    >
+                        <p>njlroach@gmail.com</p>
+                        <img src="icons/clipboard.png" class="copy" />
+                        <span class="tooltiptext" id="myTooltip"
+                            >Copy to clipboard</span
+                        >
+                    </div>
+                </div>
             </div>
         </div>
+        <input type="text" value="njlroach@gmail.com" id="myInput" />
     </body>
 </html>
 
-<!-- wormhole code from: https://codepen.io/motionharvest/pen/WNQYJyM -->
+<!-- wormhole code adapted from: https://codepen.io/motionharvest/pen/WNQYJyM -->
