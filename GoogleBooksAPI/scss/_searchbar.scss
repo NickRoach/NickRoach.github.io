@@ -1,0 +1,58 @@
+@use "devices" as devices;
+
+#searchForm {
+    align-items: center;
+    white-space: nowrap;
+}
+
+#searchInput {
+    font-size: 18px;
+    width: 60vw;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 10px;
+    margin: 0;
+    border-width: 1px;
+
+    @include devices.phone {
+        width: 40vw;
+    }
+
+    @include devices.tablet {
+        width: 60vw;
+    }
+
+    @include devices.tablet-landscape {
+        width: 60vw;
+    }
+
+    @include devices.laptop {
+        width: 60vw;
+    }
+
+    @include devices.monitor {
+        width: 60vw;
+    }
+
+    @include devices.XLmonitor {
+        width: 60vw;
+    }
+
+    &:focus {
+        outline-width: 0;
+    }
+}
+
+#searchButton {
+    height: 100%;
+    font-size: 18px;
+    color: rgba(44, 62, 168, 0.87);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    align-items: center;
+    margin: 0;
+    border-width: 1px;
+    background-color: rgba(227, 66, 51, 0.233);
+}

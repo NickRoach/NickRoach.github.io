@@ -1,0 +1,240 @@
+body {
+  background-color: #f9fcff;
+}
+
+.header {
+  text-align: center;
+}
+.header__title {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #39b54a;
+  text-decoration: underline;
+  text-decoration-color: #f3b605;
+}
+@media only screen and (max-width: 576px) {
+  .header__title {
+    font-size: 35px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .header__title {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .header__title {
+    font-size: 60px;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .header__title {
+    font-size: 60px;
+  }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1500px) {
+  .header__title {
+    font-size: 60px;
+  }
+}
+@media only screen and (min-width: 1501px) {
+  .header__title {
+    font-size: 60px;
+  }
+}
+.header__intro {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.mainImage {
+  padding: 30px;
+  padding-bottom: 0px;
+}
+@media only screen and (max-width: 576px) {
+  .mainImage {
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .mainImage {
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .mainImage {
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .mainImage {
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1500px) {
+  .mainImage {
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 1501px) {
+  .mainImage {
+    width: 200px;
+  }
+}
+
+#display {
+  display: grid;
+  grid-gap: 20px;
+  padding: 15px;
+  padding-top: 30px;
+}
+@media only screen and (max-width: 576px) {
+  #display {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  #display {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  #display {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  #display {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1500px) {
+  #display {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 1501px) {
+  #display {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+#errorDisplay {
+  text-align: center;
+}
+
+.error {
+  color: #cf3a3a;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  padding-top: 25px;
+}
+
+#searchForm {
+  align-items: center;
+  white-space: nowrap;
+}
+
+#searchInput {
+  font-size: 18px;
+  width: 60vw;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 10px;
+  margin: 0;
+  border-width: 1px;
+}
+@media only screen and (max-width: 576px) {
+  #searchInput {
+    width: 40vw;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  #searchInput {
+    width: 60vw;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  #searchInput {
+    width: 60vw;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  #searchInput {
+    width: 60vw;
+  }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1500px) {
+  #searchInput {
+    width: 60vw;
+  }
+}
+@media only screen and (min-width: 1501px) {
+  #searchInput {
+    width: 60vw;
+  }
+}
+#searchInput:focus {
+  outline-width: 0;
+}
+
+#searchButton {
+  height: 100%;
+  font-size: 18px;
+  color: rgba(44, 62, 168, 0.87);
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  align-items: center;
+  margin: 0;
+  border-width: 1px;
+  background-color: rgba(227, 66, 51, 0.233);
+}
+
+.bookCard {
+  border: 1px solid gray;
+  background-color: #f8f8f8;
+  padding: 20px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.123);
+  border-radius: 20px;
+  color: #333333;
+}
+.bookCard__imgContainer {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bookCard__headContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bookCard__image {
+  width: 150px;
+}
+.bookCard__title {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5px;
+  text-align: center;
+  font-weight: normal;
+}
+.bookCard__author {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5px;
+  text-align: center;
+  font-weight: normal;
+}
+.bookCard__descHeading {
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+.bookCard__description {
+  margin-top: 5px;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 22px;
+}

@@ -1,0 +1,36 @@
+Morse Code Translator (Wed 23rd)
+Build a website that allows users to input english or morse, and convert to morse or english
+Can be submit based, or can be dynamic based on user input
+spaces to delimit character, 4 spaces for word delimiter
+[a-z ], but you can support more things
+Example:
+let obj = {
+    a: "..",
+    b: "...",
+    ....
+}
+
+
+
+PLANNING BY ME
+
+take in a string of words delimited by spaces
+"hello how are you"
+
+split the string into an array of strings
+["hello", "how", "are", "you"]
+
+take each word and split it into an array of letters
+["h", "e", "l", "l", "o"]
+
+take each letter and push its equivalent code into the morseArray, followed by a spaces
+
+after each word is translated, push four spaces into the morseAreay
+
+
+
+make sure morse code box will only accept dot, dash and space characters
+make sure letter box will only accept A-Z, a-z, comma, stop and space characters
+make an error appear if an unsupported character is put in
+
+

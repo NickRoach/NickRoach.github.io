@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/wormhole.css" />
+        <link rel="stylesheet" href="./css/navbar.css" />
+        <link rel="stylesheet" href="./css/cards.css" />
+        <link rel="stylesheet" href="./css/body.css" />
+        <link rel="shortcut icon" type="image/ico" href="./favicon.ico" />
+
+        <title>Nick Roach: Software Engineer</title>
+
+        <script
+            src="https://kit.fontawesome.com/d3e8476aea.js"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+            defer
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"
+            defer
+        ></script>
+        <script
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/EffectComposer.js"
+            defer
+        ></script>
+        <script
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/RenderPass.js"
+            defer
+        ></script>
+        <script
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/ShaderPass.js"
+            defer
+        ></script>
+        <script
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/CopyShader.js"
+            defer
+        ></script>
+        <script
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/LuminosityHighPassShader.js"
+            defer
+        ></script>
+        <script
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68819/UnrealBloomPass.js"
+            defer
+        ></script>
+        <script
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"
+            defer
+        ></script>
+        <script
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"
+            defer
+        ></script>
+        <script src="./scripts/wormhole.js" defer></script>
+        <script src="./scripts/cards.js" defer></script>
+        <script
+            src="https://kit.fontawesome.com/d3e8476aea.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="header">
+            <nav class="navBar">
+                <div class="navBar__name">Nick Roach</div>
+                <div class="navBar__container">
+                    <div class="navBar__item">
+                        <a class="navBar__link" onclick="scrollToCard(0)"
+                            >Intro</a
+                        >
+                    </div>
+                    <div class="navBar__item">
+                        <a class="navBar__link" onclick="scrollToCard(2)"
+                            >Skills</a
+                        >
+                    </div>
+                    <div class="navBar__item">
+                        <a class="navBar__link" onclick="scrollToCard(3)"
+                            >Projects</a
+                        >
+                    </div>
+                    <div class="navBar__item">
+                        <a class="navBar__link" onclick="scrollToCard(10)"
+                            >Contact</a
+                        >
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="loading">Loading...</div>
+        <canvas class="experience"></canvas>
+        <div class="scrollTarget"></div>
+        <div class="vignette-radial"></div>
+
+        <div class="card intro">
+            <img class="portrait" src="./images/IMG_6750_square_bright.jpg" /
+            height="300">
+            <h1>Hi, I'm Nick</h1>
+            <div class="container">
+                <p>
+                    I'm a Junior Software Engineer based in the Blue Mountains,
+                    Australia
+                </p>
+            </div>
+        </div>
+
+        <div class="card chemist">
+            <img class="chemistPortrait" src="images/chemist_square.jpg" />
+            <div class="container">
+                <p>
+                    I used to be a research chemist, and I earned my PhD, but
+                    recently I did an intensive training course in computer
+                    programming with _nology.io
+                </p>
+            </div>
+        </div>
+
+        <div class="card skills">
+            <div class="container">
+                <p>I have experience with these languages and tools:</p>
+            </div>
+            <div class="skills__grid">
+                <img
+                    src="./icons/HTML5 Logo Badge.svg"
+                    alt=""
+                    class="icon item item1"
+                />
+                <img src="./icons/CSS.3.svg" alt="" class="icon item item2" />
+                <img
+                    src="./icons/sass-seeklogo.com.svg"
+                    alt=""
+                    class="icon item item3"
+                />
+                <img
+                    src="./icons/javascript-js-seeklogo.com.svg"
+                    alt=""
+                    class="icon item item4"
+                />
+                <img src="./icons/gsap.png" alt="" class="icon item item5" />
+                <img src="./icons/React-icon.svg" alt="" class="icon" />
+                <div class="item">HTML</div>
+                <div class="item">CSS</div>
+                <div class="item">SASS</div>
+                <div class="item">JS</div>
+                <div class="item">GSAP</div>
+                <div class="item">React</div>
+                <img
+                    src="./icons/bootstrap-seeklogo.com.svg"
+                    alt=""
+                    class="icon"
+                />
+                <img src="./icons/mySQL.png" alt="" class="icon item item5" />
+                <img src="./icons/firebase.png" alt="" class="icon" />
+                <img src="./icons/git.png" alt="" class="icon" />
+                <i class="fab fa-java fa-2x icon"></i>
+                <img src="./icons/spring.png" alt="" class="icon" />
+                <div class="item">Bootstrap</div>
+                <div class="item">SQL</div>
+                <div class="item">Firebase</div>
+                <div class="item">Git</div>
+                <div class="item">Java</div>
+                <div class="item">Spring</div>
+            </div>
+        </div>
+        <div class="card project1">
+            <img src="./images/MothDX-LIMS.png" alt="" class="screenshot" />
+            <div class="wideContainer">
+                <p class="blurb">
+                    I contributed to this laboratory inventory management app as
+                    part of a team comprising my whole cohort in the _nology
+                    program. It was built for a real client to their
+                    specifications and with regular communication with them. We
+                    used an agile workflow and used git version control. I
+                    worked mostly on the Java, Spring and SQL components of the
+                    backend, but also contributed to the React frontend.
+                    Unfortunately I cannot share the code or a live hosted
+                    version as the IP is the property of our client.
+                </p>
+            </div>
+        </div>
+        <div class="card project2">
+            <img
+                src="./images/ThirdEyeObservatoryScreenshot.png"
+                alt=""
+                class="screenshot"
+            />
+            <div class="wideContainer">
+                <p class="blurb">
+                    I made this web app using React. It displays some of my
+                    astrophotography and has some functionality of an e-commerce
+                    website. It uses Firebase to host a persistent product list
+                    and to store a cart for the user. Items can be added and
+                    removed from the cart, and the cart page displays the items
+                    that have been added.
+                </p>
+            </div>
+            <!-- <div class="wideContainer">
+                <a
+                    href="https://github.com/NickRoach/NickRoach.github.io/tree/main/GoogleBooksAPI"
+                    class="link"
+                    target="_blank"
+                >
+                    <p class="button">See the Code</p>
+                </a>
+                <a
+                    href="GoogleBooksAPI/index.html"
+                    class="link"
+                    target="_blank"
+                >
+                    <p class="button">See it Live</p>
+                </a>
+            </div> -->
+        </div>
+        <div class="card project3">
+            <img
+                src="./images/Google-books-search.png"
+                alt=""
+                class="screenshot"
+            />
+            <div class="wideContainer">
+                <p class="blurb">
+                    I made this website that lets you search the Google Books
+                    database using their API and displays the results. It is
+                    written in HTML, SCSS and Vanilla JS
+                </p>
+            </div>
+            <div class="wideContainer">
+                <a
+                    href="https://github.com/NickRoach/NickRoach.github.io/tree/main/GoogleBooksAPI"
+                    class="link"
+                    target="_blank"
+                >
+                    <p class="button">See the Code</p>
+                </a>
+                <a
+                    href="GoogleBooksAPI/index.html"
+                    class="link"
+                    target="_blank"
+                >
+                    <p class="button">See it Live</p>
+                </a>
+            </div>
+        </div>
+        <div class="card contact">
+            <div class="contactContainer">
+                <p>
+                    If I would be a good fit for your team please get in contact
+                </p>
+                <p>njlroach@gmail.com</p>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!-- wormhole code from: https://codepen.io/motionharvest/pen/WNQYJyM -->
