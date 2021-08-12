@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 .tooltip {
   position: relative;
   display: inline-block;
@@ -6,10 +7,12 @@
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 170px;
-  border: 1px solid white;
-  color: #fff;
+  border: 1px solid #d1d1d1;
+  color: #d1d1d1;
   font-size: 20px;
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.856);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.295);
+  font-family: "Archivo Narrow", sans-serif;
   text-align: center;
   border-radius: 6px;
   padding: 5px;
