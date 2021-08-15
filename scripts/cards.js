@@ -1,13 +1,60 @@
+//when the page is resized, reload it. This is so that the scrolltrigger stuff is reset
+window.onresize = function () {
+    location.reload();
+};
+
+//The two following functions are necessary because if the page loads and scrolls immediately to a particular point, then display elements may not load. These functions save scroll position in session storage on page unload, and then restore it with a smooth scroll motion when the user returns to the page.
+
+window.onunload = function () {
+    sessionStorage.setItem("scrollPosition", window.scrollY);
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "auto",
+    });
+};
+
+window.onload = function () {
+    let scrollPosition = sessionStorage.getItem("scrollPosition");
+
+    if (scrollPosition) {
+        setTimeout(function () {
+            window.scrollTo({
+                top: scrollPosition,
+                left: 0,
+                behavior: "smooth",
+            });
+        }, 50);
+    }
+};
+
+//Everything below here is related to the scroll triggering of display elements using GSAP scrollTrigger
+//The instantiation of the scrollTrigger object occurs in wormhole.js
+
 let percent = 0;
 let number = 7;
 let inc = 100 / (number * 2);
+let cardHeight;
+let cardWidth;
 
-let cardHeight = Math.max(
+function scrollToCard(index) {
+    let totalDocHeight = document.documentElement.scrollHeight;
+    let pixelAddress = (totalDocHeight / inc) * index;
+    window.scrollTo({
+        top: pixelAddress + 200,
+        left: 0,
+        behavior: "smooth",
+    });
+}
+
+//48 is for the navbar and 6 was to display a border that is no longer present
+cardHeight = Math.max(
     document.documentElement.clientHeight - 48 - 6,
     window.innerHeight - 48 - 6 || 0
 );
 
-let cardWidth = Math.max(
+cardWidth = Math.max(
     document.documentElement.clientWidth - 6,
     window.innerWidth - 6 || 0
 );
@@ -374,34 +421,3 @@ gsap.fromTo(
         // y: +24,
     }
 );
-
-function scrollToPoint(amount) {
-    let pixels = amount * 100;
-    window.scrollTo({
-        top: pixels,
-        left: 0,
-        behavior: "smooth",
-    });
-}
-
-function scrollToPoint(pixels) {
-    window.scrollTo({
-        top: pixels,
-        left: 0,
-        behavior: "smooth",
-    });
-}
-
-// let percent = 0;
-// let number = 7;
-// let inc = 100 / (number * 2);
-
-function scrollToCard(index) {
-    let totalDocHeight = document.documentElement.scrollHeight;
-    let pixelAddress = (totalDocHeight / inc) * index * 1.1;
-    window.scrollTo({
-        top: pixelAddress,
-        left: 0,
-        behavior: "smooth",
-    });
-}

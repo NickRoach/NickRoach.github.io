@@ -10,11 +10,20 @@
   overflow: hidden;
   color: white;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 30px;
   word-wrap: nowrap;
+}
+@media only screen and (max-width: 630px) {
+  .card {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 631px) {
+  .card {
+    flex-direction: row;
+  }
 }
 
 h1 {
@@ -26,7 +35,7 @@ h1 {
 }
 
 p {
-  font-size: 25px;
+  font-size: 0.7em;
   font-family: "Archivo Narrow", sans-serif;
   text-align: center;
   color: #d1d1d1;
@@ -35,7 +44,16 @@ p {
 
 .blurb {
   font-size: 17px;
-  text-align: justify;
+}
+@media only screen and (max-width: 630px) {
+  .blurb {
+    text-align: justify;
+  }
+}
+@media only screen and (min-width: 631px) {
+  .blurb {
+    text-align: center;
+  }
 }
 
 .link {
@@ -48,6 +66,7 @@ p {
   border: 1px solid white;
   border-radius: 10px;
   padding: 5px;
+  width: 100%;
 }
 
 @media only screen and (max-width: 630px) {
@@ -61,30 +80,45 @@ p {
   }
 }
 
-.wideContainer {
-  width: 60vw;
+.columnContainer {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wideContainer {
+  width: 90%;
+  display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-direction: row;
+}
+
+.intro {
+  flex-direction: column;
 }
 
 .portrait {
   border-radius: 50%;
   box-shadow: 0px 0px 20px white;
-  width: 50vh;
-  height: 50vh;
+  max-width: 50vh;
+}
+
+.chemist {
+  flex-direction: column;
 }
 
 .chemistPortrait {
-  border-radius: 1%;
-  width: 50vh;
+  max-width: 80vw;
+  max-height: 40vh;
   transform: rotate(-5deg);
   box-shadow: 0px 0px 20px white;
   margin-bottom: 30px;
 }
 
 .skills {
+  flex-direction: column;
   justify-content: center;
 }
 .skills__grid {
@@ -105,8 +139,25 @@ p {
   color: blue;
 }
 
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+@media only screen and (max-width: 630px) {
+  .box {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 631px) {
+  .box {
+    width: 50%;
+  }
+}
+
 .screenshot {
-  height: 60%;
+  width: 100%;
 }
 
 .contact {
@@ -139,7 +190,7 @@ p {
 }
 
 #myInput {
-  display: none;
+  opacity: 0;
 }
 
 .item {
@@ -148,7 +199,7 @@ p {
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.856);
 }
 
-.skills, .item {
+.item {
   display: flex;
   flex-direction: column;
   align-items: center;
