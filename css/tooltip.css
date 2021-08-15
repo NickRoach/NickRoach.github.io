@@ -28,7 +28,7 @@
 .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
-  top: -35%;
+  top: -32%;
   left: 50%;
   margin-left: -5px;
   border-width: 5px;

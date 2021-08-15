@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
+$breakpoint: 630px;
+
 .card {
     z-index: 3;
     width: 0;
@@ -8,15 +10,19 @@
     top: calc(50vh + 24px);
     left: 50%;
     transform: translateY(50%);
-    // transform: translateX(-50%);
     overflow: hidden;
     color: white;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 30px;
     word-wrap: nowrap;
+    @media only screen and (max-width: 630px) {
+        flex-direction: column;
+    }
+    @media only screen and (min-width: 631px) {
+        flex-direction: row;
+    }
     // border: 3px solid white;
 }
 
@@ -29,7 +35,7 @@ h1 {
 }
 
 p {
-    font-size: 25px;
+    font-size: 0.7em;
     font-family: "Archivo Narrow", sans-serif;
     text-align: center;
     color: rgb(209, 209, 209);
@@ -38,7 +44,13 @@ p {
 
 .blurb {
     font-size: 17px;
-    text-align: justify;
+
+    @media only screen and (max-width: $breakpoint) {
+        text-align: justify;
+    }
+    @media only screen and (min-width: $breakpoint + 1px) {
+        text-align: center;
+    }
 }
 
 .link {
@@ -51,46 +63,51 @@ p {
     border: 1px solid white;
     border-radius: 10px;
     padding: 5px;
+    width: 100%;
 }
 
 .container {
-    @media only screen and (max-width: 630px) {
+    @media only screen and (max-width: $breakpoint) {
         width: 100vw;
     }
-    @media only screen and (min-width: 631px) {
+    @media only screen and (min-width: $breakpoint + 1px) {
         width: 600px;
     }
 }
 
-.wideContainer {
-    width: 60vw;
+.columnContainer {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wideContainer {
+    width: 90%;
+    display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: row;
 }
 
 .intro {
-    // background-color: rgba(38, 163, 194, 0.24);
-    // background-color: rgba(194, 38, 38, 0.315);
+    flex-direction: column;
 }
 
 .portrait {
     border-radius: 50%;
     box-shadow: 0px 0px 20px rgb(255, 255, 255);
-    width: 50vh;
-    height: 50vh;
+    max-width: 50vh;
+    // height: 30%;
 }
 
 .chemist {
-    // height: 100px;
-    // width: 100px;
-    // background-color: white;
+    flex-direction: column;
 }
 
 .chemistPortrait {
-    border-radius: 1%;
-    width: 50vh;
+    max-width: 80vw;
+    max-height: 40vh;
     transform: rotate(-5deg);
     box-shadow: 0px 0px 20px rgb(255, 255, 255);
     margin-bottom: 30px;
@@ -98,8 +115,7 @@ p {
 }
 
 .skills {
-    // @extend %sectionBlock;
-    @extend %flexSetup;
+    flex-direction: column;
     justify-content: center;
     &__grid {
         margin-top: 60px;
@@ -109,7 +125,6 @@ p {
         grid-gap: 20px;
         width: 90%;
     }
-    // background-color: rgba(139, 0, 0, 0.185);
 }
 
 .fa-java {
@@ -121,12 +136,24 @@ p {
     color: blue;
 }
 
-.projects {
-    // background-color: rgba(194, 38, 38, 0.24);
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: $breakpoint) {
+        width: 100%;
+    }
+    @media only screen and (min-width: $breakpoint + 1px) {
+        width: 50%;
+    }
+    margin: 5px;
+}
+
+.project1 {
 }
 
 .screenshot {
-    height: 60%;
+    width: 100%;
 }
 
 .contact {
@@ -159,7 +186,7 @@ p {
 }
 
 #myInput {
-    display: none;
+    opacity: 0;
 }
 
 .item {
