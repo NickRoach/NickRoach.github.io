@@ -44,6 +44,7 @@ p {
 
 .blurb {
   font-size: 17px;
+  width: 95%;
 }
 @media only screen and (max-width: 630px) {
   .blurb {
@@ -88,7 +89,6 @@ p {
 }
 
 .wideContainer {
-  width: 90%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -157,7 +157,7 @@ p {
 }
 
 .screenshot {
-  width: 100%;
+  width: 95%;
 }
 
 .contact {
