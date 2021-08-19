@@ -41,6 +41,11 @@ p {
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.856);
 }
 
+a {
+    text-decoration: none;
+    // text-decoration-color: rgba(255, 255, 255, 0);
+}
+
 .swipeUp {
     width: 15%;
     @media only screen and (max-width: $breakpoint) {
@@ -177,7 +182,7 @@ p {
 }
 
 .contact {
-    background-color: rgba(7, 23, 167, 0.24);
+    // background-color: rgba(7, 23, 167, 0.24);
     border-radius: 50%;
 }
 
@@ -213,7 +218,8 @@ p {
     align-items: center;
     font-family: Arial;
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.856);
-
+    color: rgb(209, 209, 209);
+    text-decoration: none;
     @media only screen and (max-width: $breakpoint) {
         font-size: 18px;
     }
@@ -236,6 +242,15 @@ p {
     cursor: pointer;
     width: 100%;
     margin: auto;
+}
+
+.linkedInGithub {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #myInput {
