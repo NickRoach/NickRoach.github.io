@@ -413,11 +413,11 @@ gsap.fromTo(
             toggleActions: "restart reverse reverse reverse",
         },
         duration: 0.3,
-        width: 400,
-        height: 400,
+        width: 600,
+        height: 600,
         opacity: 1,
-        x: "-53%",
-        y: "-55%",
+        x: "-52.3%",
+        y: "-54%",
         // y: +24,
     }
 );
