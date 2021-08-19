@@ -42,6 +42,15 @@ p {
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.856);
 }
 
+.swipeUp {
+  width: 15%;
+}
+@media only screen and (min-width: 631px) {
+  .swipeUp {
+    display: none;
+  }
+}
+
 .blurb {
   font-size: 17px;
   width: 95%;
@@ -70,6 +79,9 @@ p {
   width: 100%;
 }
 
+.container {
+  max-width: 95%;
+}
 @media only screen and (max-width: 630px) {
   .container {
     width: 100vw;
@@ -109,12 +121,19 @@ p {
   flex-direction: column;
 }
 
-.chemistPortrait {
+.whiteBackground {
+  background: rgba(233, 233, 233, 0.651);
+  transform: rotate(-5deg);
+  margin-bottom: 30px;
   max-width: 80vw;
   max-height: 40vh;
-  transform: rotate(-5deg);
+  border: 1px solid rgba(255, 255, 255, 0.212);
+}
+
+.chemistPortrait {
+  max-height: 100%;
+  max-width: 100%;
   box-shadow: 0px 0px 20px white;
-  margin-bottom: 30px;
 }
 
 .skills {
@@ -122,12 +141,28 @@ p {
   justify-content: center;
 }
 .skills__grid {
-  margin-top: 60px;
   justify-content: space-around;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
   width: 90%;
+}
+@media only screen and (max-width: 1180px) {
+  .skills__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-width: 1181px) and (max-width: 1319px) {
+  .skills__grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 30px;
+  }
+}
+@media only screen and (min-width: 1321px) {
+  .skills__grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 60px;
+  }
 }
 
 .fa-java {
@@ -166,13 +201,51 @@ p {
 }
 
 .contactContainer {
-  width: 300px;
+  width: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
 }
 
 .icon {
-  width: 50px;
   margin: auto;
   box-shadow: rgba(255, 255, 255, 0.856);
+}
+@media only screen and (max-width: 630px) {
+  .icon {
+    width: 35px;
+  }
+}
+@media only screen and (min-width: 631px) {
+  .icon {
+    width: 50px;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.856);
+}
+@media only screen and (max-width: 630px) {
+  .item {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 631px) {
+  .item {
+    font-size: 20px;
+  }
 }
 
 .copy {
@@ -187,20 +260,10 @@ p {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  width: 100%;
+  margin: auto;
 }
 
 #myInput {
   opacity: 0;
-}
-
-.item {
-  font-family: Arial;
-  font-size: 20px;
-  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.856);
-}
-
-.item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }

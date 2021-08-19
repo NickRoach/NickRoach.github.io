@@ -20,7 +20,7 @@
   z-index: 1;
   top: 80px;
   left: 50%;
-  margin-left: -75px;
+  margin-left: -38%;
   opacity: 0;
   transition: opacity 0.3s;
 }

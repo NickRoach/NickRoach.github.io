@@ -23,7 +23,6 @@ $breakpoint: 630px;
     @media only screen and (min-width: 631px) {
         flex-direction: row;
     }
-    // border: 3px solid white;
 }
 
 h1 {
@@ -40,6 +39,15 @@ p {
     text-align: center;
     color: rgb(209, 209, 209);
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.856);
+}
+
+.swipeUp {
+    width: 15%;
+    @media only screen and (max-width: $breakpoint) {
+    }
+    @media only screen and (min-width: $breakpoint + 1px) {
+        display: none;
+    }
 }
 
 .blurb {
@@ -67,6 +75,7 @@ p {
 }
 
 .container {
+    max-width: 95%;
     @media only screen and (max-width: $breakpoint) {
         width: 100vw;
     }
@@ -97,32 +106,47 @@ p {
     border-radius: 50%;
     box-shadow: 0px 0px 20px rgb(255, 255, 255);
     max-width: 50vh;
-    // height: 30%;
 }
 
 .chemist {
     flex-direction: column;
 }
 
-.chemistPortrait {
+.whiteBackground {
+    background: rgba(233, 233, 233, 0.651);
+    transform: rotate(-5deg);
+    margin-bottom: 30px;
     max-width: 80vw;
     max-height: 40vh;
-    transform: rotate(-5deg);
+    border: 1px solid rgba(255, 255, 255, 0.212);
+}
+
+.chemistPortrait {
+    max-height: 100%;
+    max-width: 100%;
     box-shadow: 0px 0px 20px rgb(255, 255, 255);
-    margin-bottom: 30px;
-    // border: 2px solid rgba(150, 150, 150, 0.473);
 }
 
 .skills {
     flex-direction: column;
     justify-content: center;
     &__grid {
-        margin-top: 60px;
         justify-content: space-around;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 20px;
         width: 90%;
+        @media only screen and (max-width: 1180px) {
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-top: 0px;
+        }
+        @media only screen and (min-width: 1181px) and (max-width: 1319px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin-top: 30px;
+        }
+        @media only screen and (min-width: 1320px + 1px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            margin-top: 60px;
+        }
     }
 }
 
@@ -148,9 +172,6 @@ p {
     margin: 2vw;
 }
 
-.project1 {
-}
-
 .screenshot {
     width: 95%;
 }
@@ -161,13 +182,44 @@ p {
 }
 
 .contactContainer {
-    width: 300px;
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
 }
 
 .icon {
-    width: 50px;
     margin: auto;
     box-shadow: rgba(255, 255, 255, 0.856);
+    @media only screen and (max-width: $breakpoint) {
+        width: 35px;
+    }
+    @media only screen and (min-width: $breakpoint + 1px) {
+        width: 50px;
+    }
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.856);
+
+    @media only screen and (max-width: $breakpoint) {
+        font-size: 18px;
+    }
+    @media only screen and (min-width: $breakpoint + 1px) {
+        font-size: 20px;
+    }
 }
 
 .copy {
@@ -182,30 +234,10 @@ p {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    width: 100%;
+    margin: auto;
 }
 
 #myInput {
     opacity: 0;
-}
-
-.item {
-    @extend %flexSetup;
-    font-family: Arial;
-    font-size: 20px;
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.856);
-}
-
-%sectionBlock {
-    @media only screen and (max-width: 1300px) {
-        width: 80vw;
-    }
-    @media only screen and (min-width: 1301px) {
-        width: 1041px;
-    }
-}
-
-%flexSetup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
