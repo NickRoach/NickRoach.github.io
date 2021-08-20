@@ -1,7 +1,7 @@
 //when the page is resized, reload it. This is so that the scrolltrigger stuff is reset
-// window.onresize = function () {
-//     location.reload();
-// };
+window.onresize = function () {
+    location.reload();
+};
 
 //The two following functions are necessary because if the page loads and scrolls immediately to a particular point, then display elements may not load. These functions save scroll position in session storage on page unload, and then restore it with a smooth scroll motion when the user returns to the page.
 
@@ -416,8 +416,8 @@ gsap.fromTo(
         width: 600,
         height: 600,
         opacity: 1,
-        x: "-52.3%",
-        y: "-54%",
+        x: "-50%",
+        y: "-50%",
         // y: +24,
     }
 );
