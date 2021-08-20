@@ -3,7 +3,6 @@
   by Aaron Sherrill
   Copyright 2019
 */
-
 THREE.SpriteSheetTexture = function (
     image,
     framesX,
@@ -115,14 +114,13 @@ scene.fog = new THREE.Fog(0x194794, 0, 130);
 var clock = new THREE.Clock();
 
 //Create a perpsective camera
-var cameraRotationProxyX = 3.14159;
+var cameraRotationProxyX = 3.1415926535;
 var cameraRotationProxyY = 0;
 
 var camera = new THREE.PerspectiveCamera(45, ww / wh, 0.001, 200);
 camera.rotation.y = cameraRotationProxyX;
 camera.rotation.z = cameraRotationProxyY;
 
-//camera.position.z = 400;
 var c = new THREE.Group();
 c.position.z = 400;
 
@@ -293,6 +291,7 @@ function render() {
 
     //Render the scene
     //renderer.render(scene, camera);
+
     composer.render();
 
     requestAnimationFrame(render);
@@ -399,7 +398,7 @@ $(document).mousemove(function (evt) {
         evt.clientX,
         0,
         window.innerWidth,
-        3.17,
+        3.2,
         3.11
     );
     cameraRotationProxyY = Mathutils.map(

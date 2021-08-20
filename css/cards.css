@@ -15,6 +15,14 @@
   font-size: 30px;
   word-wrap: nowrap;
 }
+@media only screen and (min-width: 660px) {
+  .card {
+    position: fixed;
+    top: calc(50vh + 24px);
+    left: 50%;
+    transform: translateY(50%);
+  }
+}
 @media only screen and (max-width: 630px) {
   .card {
     flex-direction: column;
@@ -49,7 +57,7 @@ a {
 .swipeUp {
   width: 15%;
 }
-@media only screen and (min-width: 631px) {
+@media only screen and (min-width: 661px) {
   .swipeUp {
     display: none;
   }
@@ -57,14 +65,15 @@ a {
 
 .blurb {
   font-size: 17px;
+  line-height: 1.5;
   width: 95%;
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 660px) {
   .blurb {
     text-align: justify;
   }
 }
-@media only screen and (min-width: 631px) {
+@media only screen and (min-width: 661px) {
   .blurb {
     text-align: center;
   }
@@ -86,12 +95,12 @@ a {
 .container {
   max-width: 95%;
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 660px) {
   .container {
     width: 100vw;
   }
 }
-@media only screen and (min-width: 631px) {
+@media only screen and (min-width: 661px) {
   .container {
     width: 600px;
   }
@@ -184,12 +193,12 @@ a {
   align-items: center;
   margin: 2vw;
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 660px) {
   .box {
     width: 100%;
   }
 }
-@media only screen and (min-width: 631px) {
+@media only screen and (min-width: 661px) {
   .box {
     width: 50%;
   }
@@ -201,6 +210,9 @@ a {
 
 .contact {
   border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .contactContainer {
@@ -222,12 +234,12 @@ a {
   margin: auto;
   box-shadow: rgba(255, 255, 255, 0.856);
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 660px) {
   .icon {
     width: 35px;
   }
 }
-@media only screen and (min-width: 631px) {
+@media only screen and (min-width: 661px) {
   .icon {
     width: 50px;
   }
@@ -242,12 +254,12 @@ a {
   color: #d1d1d1;
   text-decoration: none;
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 660px) {
   .item {
     font-size: 18px;
   }
 }
-@media only screen and (min-width: 631px) {
+@media only screen and (min-width: 661px) {
   .item {
     font-size: 20px;
   }
