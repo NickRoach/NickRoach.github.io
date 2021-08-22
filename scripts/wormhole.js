@@ -393,19 +393,21 @@ scene.add(particleSystem1);
 scene.add(particleSystem2);
 scene.add(particleSystem3);
 
-$(document).mousemove(function (evt) {
-    cameraRotationProxyX = Mathutils.map(
-        evt.clientX,
-        0,
-        window.innerWidth,
-        3.2,
-        3.11
-    );
-    cameraRotationProxyY = Mathutils.map(
-        evt.clientY,
-        0,
-        window.innerHeight,
-        -0.05,
-        0.01
-    );
-});
+if (screen.width > 600) {
+    $(document).mousemove(function (evt) {
+        cameraRotationProxyX = Mathutils.map(
+            evt.clientX,
+            0,
+            window.innerWidth,
+            3.2,
+            3.11
+        );
+        cameraRotationProxyY = Mathutils.map(
+            evt.clientY,
+            0,
+            window.innerHeight,
+            -0.05,
+            0.01
+        );
+    });
+}
