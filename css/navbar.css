@@ -66,3 +66,13 @@
   min-width: 200px;
   margin-left: 10px;
 }
+
+.return {
+  width: 30px;
+  margin-right: 12px;
+}
+@media only screen and (min-width: 630px) {
+  .return {
+    display: none;
+  }
+}
