@@ -114,7 +114,7 @@ scene.fog = new THREE.Fog(0x194794, 0, 130);
 var clock = new THREE.Clock();
 
 //Create a perpsective camera
-var cameraRotationProxyX = 3.1415926535;
+var cameraRotationProxyX = 3.155;
 var cameraRotationProxyY = 0;
 
 var camera = new THREE.PerspectiveCamera(45, ww / wh, 0.001, 200);
