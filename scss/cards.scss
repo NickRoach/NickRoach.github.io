@@ -117,6 +117,7 @@ a {
 }
 
 .portrait {
+    margin-top: 20px;
     border-radius: 50%;
     box-shadow: 0px 0px 20px rgb(255, 255, 255);
     @media only screen and (max-width: $breakpoint) {
@@ -132,6 +133,7 @@ a {
 }
 
 .whiteBackground {
+    margin-top: 20px;
     background: rgba(233, 233, 233, 0.651);
     transform: rotate(-5deg);
     margin-bottom: 30px;
