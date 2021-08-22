@@ -16,7 +16,6 @@ $breakpoint: 660px;
     top: calc(50vh + 24px);
     left: 50%;
     transform: translateY(50%);
-
     overflow: hidden;
     color: white;
     display: flex;
@@ -26,6 +25,7 @@ $breakpoint: 660px;
     word-wrap: nowrap;
     @media only screen and (max-width: 630px) {
         flex-direction: column;
+        padding-bottom: 50px;
     }
     @media only screen and (min-width: 631px) {
         flex-direction: row;
@@ -63,14 +63,15 @@ a {
 }
 
 .blurb {
-    font-size: 17px;
     line-height: 1.5;
     width: 95%;
     @media only screen and (max-width: $breakpoint) {
         text-align: justify;
+        font-size: 13px;
     }
     @media only screen and (min-width: $breakpoint + 1px) {
         text-align: center;
+        font-size: 17px;
     }
 }
 

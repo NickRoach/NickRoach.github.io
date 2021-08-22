@@ -26,6 +26,7 @@
 @media only screen and (max-width: 630px) {
   .card {
     flex-direction: column;
+    padding-bottom: 50px;
   }
 }
 @media only screen and (min-width: 631px) {
@@ -64,18 +65,19 @@ a {
 }
 
 .blurb {
-  font-size: 17px;
   line-height: 1.5;
   width: 95%;
 }
 @media only screen and (max-width: 660px) {
   .blurb {
     text-align: justify;
+    font-size: 13px;
   }
 }
 @media only screen and (min-width: 661px) {
   .blurb {
     text-align: center;
+    font-size: 17px;
   }
 }
 
