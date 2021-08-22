@@ -156,35 +156,36 @@ a {
 .skills__grid {
   justify-content: space-around;
   display: grid;
-  grid-gap: 20px;
   width: 90%;
 }
 @media only screen and (max-width: 1180px) {
   .skills__grid {
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 0px;
+    grid-gap: 5px;
   }
 }
 @media only screen and (min-width: 1181px) and (max-width: 1319px) {
   .skills__grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 30px;
+    grid-gap: 20px;
   }
 }
 @media only screen and (min-width: 1321px) {
   .skills__grid {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     margin-top: 60px;
+    grid-gap: 20px;
   }
 }
 
 .fa-java {
   font-family: FontAwesome;
   color: #f09312;
-}
-
-.color-change {
-  color: blue;
+  border: 1px solid red;
+  position: relative;
+  transform: translateY(-15%);
 }
 
 .box {
@@ -227,6 +228,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   height: 100px;
 }
 
@@ -256,7 +258,7 @@ a {
 }
 @media only screen and (max-width: 660px) {
   .item {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 661px) {
