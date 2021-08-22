@@ -57,3 +57,11 @@
     min-width: 200px;
     margin-left: 10px;
 }
+
+.return {
+    @media only screen and (min-width: 630px) {
+        display: none;
+    }
+    width: 30px;
+    margin-right: 12px;
+}
