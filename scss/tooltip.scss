@@ -27,10 +27,6 @@
     opacity: 0;
     transition: opacity 0.3s;
     user-select: none; /* standerd */
-    // -moz-user-select: none; /* firefox specific */
-    // -webkit-user-select: none; /* Chrome, Opera and Safari*/
-    // -ms-user-select: none; /* IE, ms-edge */
-    -webkit-tap-highlight-color: transparent; /* for removing the highlight */
 }
 
 .tooltip .tooltiptext::after {
@@ -57,4 +53,5 @@
     cursor: pointer;
     width: 100%;
     margin: auto;
+    -webkit-tap-highlight-color: transparent; /* for removing the highlight */
 }
