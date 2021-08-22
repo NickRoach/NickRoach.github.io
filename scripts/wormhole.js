@@ -115,7 +115,7 @@ var clock = new THREE.Clock();
 
 //Create a perpsective camera
 var cameraRotationProxyX = 3.155;
-var cameraRotationProxyY = 0;
+var cameraRotationProxyY = -0.027;
 
 var camera = new THREE.PerspectiveCamera(45, ww / wh, 0.001, 200);
 camera.rotation.y = cameraRotationProxyX;
