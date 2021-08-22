@@ -67,7 +67,7 @@ a {
     width: 95%;
     @media only screen and (max-width: $breakpoint) {
         text-align: justify;
-        font-size: 14px;
+        font-size: 15px;
     }
     @media only screen and (min-width: $breakpoint + 1px) {
         text-align: center;
@@ -124,7 +124,7 @@ a {
         height: 40vh;
     }
     @media only screen and (min-width: $breakpoint + 1px) {
-        height: 40vw;
+        height: 40vh;
     }
 }
 
@@ -143,7 +143,7 @@ a {
         height: 40vh;
     }
     @media only screen and (min-width: $breakpoint + 1px) {
-        height: 40vw;
+        height: 40vh;
     }
     border: 1px solid rgba(255, 255, 255, 0.212);
 }
