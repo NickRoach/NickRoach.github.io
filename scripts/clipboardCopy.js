@@ -1,7 +1,6 @@
 function hoverFunction() {
     var tooltip = document.getElementById("myTooltip");
     tooltip.style.opacity = 1;
-    console.log("hover called");
 }
 
 function myFunction() {
