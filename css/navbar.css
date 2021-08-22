@@ -76,3 +76,6 @@
     display: none;
   }
 }
+.return:hover {
+  cursor: pointer;
+}
