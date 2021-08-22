@@ -14,7 +14,7 @@ body {
 
 .scrollTarget {
   position: absolute;
-  height: 1000vh;
+  height: 1700vh;
   width: 100px;
   top: 0;
   z-index: 0;
