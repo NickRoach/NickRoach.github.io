@@ -129,7 +129,16 @@ a {
 .portrait {
   border-radius: 50%;
   box-shadow: 0px 0px 20px white;
-  max-width: 50vh;
+}
+@media only screen and (max-width: 660px) {
+  .portrait {
+    height: 40vh;
+  }
+}
+@media only screen and (min-width: 661px) {
+  .portrait {
+    height: 40vw;
+  }
 }
 
 .chemist {
@@ -140,9 +149,17 @@ a {
   background: rgba(233, 233, 233, 0.651);
   transform: rotate(-5deg);
   margin-bottom: 30px;
-  max-width: 80vw;
-  max-height: 40vh;
   border: 1px solid rgba(255, 255, 255, 0.212);
+}
+@media only screen and (max-width: 660px) {
+  .whiteBackground {
+    height: 40vh;
+  }
+}
+@media only screen and (min-width: 661px) {
+  .whiteBackground {
+    height: 40vw;
+  }
 }
 
 .chemistPortrait {
