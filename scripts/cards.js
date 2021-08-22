@@ -1,9 +1,12 @@
 //when the page is resized, reload it. This is so that the scrolltrigger stuff is reset
-if (screen.width > 600) {
-    window.onresize = function () {
+
+window.onresize = function () {
+    if (screen.width > 600) {
         location.reload();
-    };
-}
+    }
+};
+
+console.log(screen.width);
 
 //The two following functions are necessary because if the page loads and scrolls immediately to a particular point, then display elements may not load. These functions save scroll position in session storage on page unload, and then restore it with a smooth scroll motion when the user returns to the page.
 
