@@ -108,7 +108,19 @@
         <img src="icons/hand-swipe-white-stroke.svg" class="swipeUp" id="swipeUp"/>
 
         <div class="card intro">
-            <img class="portrait" src="./images/IMG_6750_square_bright.jpg" />
+            <img
+                srcset="
+                images/portrait_1260.jpg 1260w,
+                images/portrait_900.jpg 900w,
+                images/portrait_700.jpg 700w,
+                images/portrait_500.jpg 500w,
+                images/portrait_300.jpg 300w"
+                src="images/portrait_300.jpg 300w"
+                sizes="40vh"
+                class="portrait"
+            />
+
+            <!-- src="images/portrait_300.jpg" -->
             <h1>Hi, I'm Nick</h1>
             <div class="container">
                 <p>
@@ -120,7 +132,17 @@
 
         <div class="card chemist">
             <div class="whiteBackground">
-                <img class="chemistPortrait" src="images/chemist_square.jpg" />
+                <img srcset="
+                images/chemist_1191.jpg 1191w,
+                images/chemist_900.jpg 900w,
+                images/chemist_700.jpg 700w,
+                images/chemist_500.jpg 500w,
+                images/chemist_300.jpg 300w"
+                src="./images/chemist_300.jpg"
+                sizes="40vh" 
+                class="chemistPortrait"
+            />
+
             </div>
             <div class="container">
                 <p>
@@ -136,7 +158,7 @@
             <div class="skills__grid">
                 <div class="gridItem">
                     <img
-                        src="./icons/HTML5 Logo Badge.svg"
+                        src="./icons/HTML5.svg"
                         alt=""
                         class="icon"
                     />
@@ -144,13 +166,13 @@
                 </div>
 
                 <div class="gridItem">
-                    <img src="./icons/CSS.3.svg" alt="" class="icon" />
+                    <img src="./icons/CSS3.svg" alt="" class="icon" />
                     <div class="item">CSS</div>
                 </div>
 
                 <div class="gridItem">
                     <img
-                        src="./icons/sass-seeklogo.com.svg"
+                        src="./icons/sass.svg"
                         alt=""
                         class="icon"
                     />
@@ -159,7 +181,7 @@
 
                 <div class="gridItem">
                     <img
-                        src="./icons/javascript-js-seeklogo.com.svg"
+                        src="./icons/javascript.svg"
                         alt=""
                         class="icon"
                     />
@@ -172,13 +194,13 @@
                 </div>
 
                 <div class="gridItem">
-                    <img src="./icons/React-icon.svg" alt="" class="icon" />
+                    <img src="./icons/react.svg" alt="" class="icon" />
                     <div class="item">React</div>
                 </div>
 
                 <div class="gridItem">
                     <img
-                        src="./icons/bootstrap-seeklogo.com.svg"
+                        src="./icons/bootstrap.svg"
                         alt=""
                         class="icon"
                     />
@@ -186,7 +208,7 @@
                 </div>
 
                 <div class="gridItem">
-                    <img src="./icons/mySQL.png" alt="" class="icon" />
+                    <img src="./icons/SQL.png" alt="" class="icon" />
                     <div class="item">SQL</div>
                 </div>
 
@@ -214,7 +236,16 @@
         </div>
         <div class="card project1">
             <div class="box">
-                <img src="./images/MothDX-LIMS.png" alt="" class="screenshot" />
+                <img srcset="
+                    images/MothDX-LIMS_1052w.png 1052w,
+                    images/MothDX-LIMS_900w.png 900w,
+                    images/MothDX-LIMS_700w.png 700w,
+                    images/MothDX-LIMS_500w.png 500w,
+                    images/MothDX-LIMS_300w.png 300w"
+                    src="./images/MothDX-LIMS_300w.png"
+                    alt="" 
+                    class="screenshot"
+                />
             </div>
             <div class="box">
                 <p class="blurb">
@@ -232,10 +263,15 @@
         </div>
         <div class="card project2">
             <div class="box">
-                <img
-                    src="./images/ThirdEyeObservatoryScreenshot.png"
-                    alt=""
-                    class="screenshot"
+                <img srcset="
+                images/ThirdEyeObservatory_1052w.png 1052w,
+                images/ThirdEyeObservatory_900w.png 900w,
+                images/ThirdEyeObservatory_700w.png 700w,
+                images/ThirdEyeObservatory_500w.png 500w,
+                images/ThirdEyeObservatory_300w.png 300w"
+                src="./images/ThirdEyeObservatory_300w.png"
+                alt=""
+                class="screenshot"
                 />
             </div>
             <div class="box">
@@ -267,8 +303,13 @@
         </div>
         <div class="card project3">
             <div class="box">
-                <img
-                    src="./images/Google-books-search.png"
+                <img srcset="
+                    images/Google-books-search_1052w.png 1052w,
+                    images/Google-books-search_900w.png 900w,
+                    images/Google-books-search_700w.png 700w,
+                    images/Google-books-search_500w.png 500w,
+                    images/Google-books-search_300w.png 300w"
+                    src="./images/Google-books-search_300w.png"
                     alt=""
                     class="screenshot"
                 />

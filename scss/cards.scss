@@ -71,13 +71,7 @@ a {
     top: 50vh;
     left: 50vw;
     z-index: 10;
-
-    @media only screen and (max-width: $breakpoint) {
-        display: initial;
-    }
-    @media only screen and (min-width: $breakpoint + 1px) {
-        display: none;
-    }
+    display: none;
 }
 
 .blurb {
@@ -178,21 +172,24 @@ a {
     &__grid {
         justify-content: space-around;
         display: grid;
-        width: 90%;
+
         @media only screen and (max-width: 1180px) {
             grid-template-columns: 1fr 1fr 1fr;
             margin-top: 0px;
             grid-gap: 5px;
+            width: 100%;
         }
         @media only screen and (min-width: 1181px) and (max-width: 1319px) {
             grid-template-columns: 1fr 1fr 1fr 1fr;
             margin-top: 30px;
             grid-gap: 20px;
+            width: 90%;
         }
         @media only screen and (min-width: 1320px + 1px) {
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
             margin-top: 60px;
             grid-gap: 20px;
+            width: 90%;
         }
     }
 }
