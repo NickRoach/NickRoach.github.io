@@ -132,12 +132,8 @@ a {
     margin-top: 20px;
     border-radius: 50%;
     box-shadow: 0px 0px 20px rgb(255, 255, 255);
-    @media only screen and (max-width: $breakpoint) {
-        height: 40vh;
-    }
-    @media only screen and (min-width: $breakpoint + 1px) {
-        height: 40vh;
-    }
+    height: 40vh;
+    width: 40vh;
 }
 
 .chemist {
