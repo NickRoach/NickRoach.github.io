@@ -44,11 +44,20 @@ h1 {
 }
 
 p {
-  font-size: 0.7em;
   font-family: "Archivo Narrow", sans-serif;
   text-align: center;
   color: #d1d1d1;
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.856);
+}
+@media only screen and (max-width: 660px) {
+  p {
+    font-size: 0.55em;
+  }
+}
+@media only screen and (min-width: 661px) {
+  p {
+    font-size: 0.7em;
+  }
 }
 
 a {

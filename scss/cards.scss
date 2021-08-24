@@ -41,7 +41,12 @@ h1 {
 }
 
 p {
-    font-size: 0.7em;
+    @media only screen and (max-width: $breakpoint) {
+        font-size: 0.55em;
+    }
+    @media only screen and (min-width: $breakpoint + 1px) {
+        font-size: 0.7em;
+    }
     font-family: "Archivo Narrow", sans-serif;
     text-align: center;
     color: rgb(209, 209, 209);
