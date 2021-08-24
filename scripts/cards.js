@@ -20,6 +20,7 @@ window.onunload = function () {
 };
 
 window.onload = function () {
+    startSwiper();
     let scrollPosition = sessionStorage.getItem("scrollPosition");
 
     if (scrollPosition) {

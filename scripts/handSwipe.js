@@ -9,9 +9,9 @@ window.onscroll = function () {
     }
 };
 
-window.onload = function () {
+function startSwiper() {
     if (window.innerWidth <= 600) {
         let swiper = document.getElementById("swipeUp");
         swiper.style.display = "inline";
     }
-};
+}
