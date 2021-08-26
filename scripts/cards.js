@@ -38,14 +38,15 @@ window.onload = function () {
 //The instantiation of the scrollTrigger object occurs in wormhole.js
 
 let percent = 0;
-let number = 7;
-let inc = 100 / (number * 2);
+let number = 9;
+//increment in percentage
+let inc = 100 / (number * 2 - 1);
 let cardHeight;
 let cardWidth;
 
 function scrollToCard(index) {
     let totalDocHeight = document.documentElement.scrollHeight;
-    let pixelAddress = (totalDocHeight / inc) * index;
+    let pixelAddress = (totalDocHeight / 100) * inc * (index * 2);
     window.scrollTo({
         top: pixelAddress + 200,
         left: 0,
@@ -368,6 +369,124 @@ gsap.fromTo(
 
 gsap.fromTo(
     ".project3",
+    {
+        width: cardWidth,
+        height: cardHeight,
+        opacity: 1,
+        x: "-50%",
+        y: "-50%",
+    },
+    {
+        scrollTrigger: {
+            trigger: ".scrollTarget",
+            start: `${(percent += inc)}% top`,
+            // markers: true,
+            // scrub: true,
+            toggleActions: "restart reverse reverse reverse",
+        },
+        duration: 0.3,
+        width: expandedCardWidth,
+        height: expandedCardHeight,
+        opacity: 0,
+        // ease: "power2.in",
+        x: "-50%",
+        y: "-50%",
+    }
+);
+
+gsap.from(".project4", {
+    width: 0,
+    height: 0,
+    opacity: 0,
+    x: "-50%",
+    y: "-50%",
+});
+
+gsap.fromTo(
+    ".project4",
+    {
+        width: 0,
+        height: 0,
+        opacity: 0,
+        x: "-50%",
+        y: "-50%",
+    },
+    {
+        scrollTrigger: {
+            trigger: ".scrollTarget",
+            start: `${(percent += inc)}% top`,
+            toggleActions: "restart reverse reverse reverse",
+        },
+        duration: 0.3,
+        width: cardWidth,
+        height: cardHeight,
+        opacity: 1,
+        x: "-50%",
+        y: "-50%",
+    }
+);
+
+gsap.fromTo(
+    ".project4",
+    {
+        width: cardWidth,
+        height: cardHeight,
+        opacity: 1,
+        x: "-50%",
+        y: "-50%",
+    },
+    {
+        scrollTrigger: {
+            trigger: ".scrollTarget",
+            start: `${(percent += inc)}% top`,
+            // markers: true,
+            // scrub: true,
+            toggleActions: "restart reverse reverse reverse",
+        },
+        duration: 0.3,
+        width: expandedCardWidth,
+        height: expandedCardHeight,
+        opacity: 0,
+        // ease: "power2.in",
+        x: "-50%",
+        y: "-50%",
+    }
+);
+
+gsap.from(".project5", {
+    width: 0,
+    height: 0,
+    opacity: 0,
+    x: "-50%",
+    y: "-50%",
+});
+
+gsap.fromTo(
+    ".project5",
+    {
+        width: 0,
+        height: 0,
+        opacity: 0,
+        x: "-50%",
+        y: "-50%",
+    },
+    {
+        scrollTrigger: {
+            trigger: ".scrollTarget",
+            start: `${(percent += inc)}% top`,
+            toggleActions: "restart reverse reverse reverse",
+        },
+        duration: 0.3,
+        width: cardWidth,
+        height: cardHeight,
+        opacity: 1,
+        x: "-50%",
+        y: "-50%",
+    }
+);
+
+gsap.fromTo(
+    ".project5",
     {
         width: cardWidth,
         height: cardHeight,
