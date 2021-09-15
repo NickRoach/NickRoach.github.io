@@ -512,6 +512,65 @@ gsap.fromTo(
     }
 );
 
+gsap.from(".project6", {
+    width: 0,
+    height: 0,
+    opacity: 0,
+    x: "-50%",
+    y: "-50%",
+});
+
+gsap.fromTo(
+    ".project6",
+    {
+        width: 0,
+        height: 0,
+        opacity: 0,
+        x: "-50%",
+        y: "-50%",
+    },
+    {
+        scrollTrigger: {
+            trigger: ".scrollTarget",
+            start: `${(percent += inc)}% top`,
+            toggleActions: "restart reverse reverse reverse",
+        },
+        duration: 0.3,
+        width: cardWidth,
+        height: cardHeight,
+        opacity: 1,
+        x: "-50%",
+        y: "-50%",
+    }
+);
+
+gsap.fromTo(
+    ".project6",
+    {
+        width: cardWidth,
+        height: cardHeight,
+        opacity: 1,
+        x: "-50%",
+        y: "-50%",
+    },
+    {
+        scrollTrigger: {
+            trigger: ".scrollTarget",
+            start: `${(percent += inc)}% top`,
+            // markers: true,
+            // scrub: true,
+            toggleActions: "restart reverse reverse reverse",
+        },
+        duration: 0.3,
+        width: expandedCardWidth,
+        height: expandedCardHeight,
+        opacity: 0,
+        // ease: "power2.in",
+        x: "-50%",
+        y: "-50%",
+    }
+);
+
 //fade in contact
 gsap.from(".contact", {
     width: 0,
