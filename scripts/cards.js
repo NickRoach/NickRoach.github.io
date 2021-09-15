@@ -38,7 +38,7 @@ window.onload = function () {
 //The instantiation of the scrollTrigger object occurs in wormhole.js
 
 let percent = 0;
-let number = 9;
+let number = 10;
 //increment in percentage
 let inc = 100 / (number * 2 - 1);
 let cardHeight;
