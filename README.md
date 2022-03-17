@@ -2,7 +2,7 @@
 
 The UX of this page is based on GSAP Scrolltrigger, used both to control progress through the wormhole and to display and hide the content cards (cards.js). The wormhole itself is made using three.js (wormhole.js) and was adapted from a codepen by Aaron Sherrill available here: https://codepen.io/motionharvest/pen/WNQYJyM
 
-Media queries are used to change how the skills icon grid is displayed, having either 6, 4 or 3 columns, depending on the screen width. Similarly, media queries are used to either display the screenshots beside their accociated blurb or above it.
+Media queries are used to change how the skills icon grid is displayed, having either 6, 4 or 3 columns, depending on the screen width. Similarly, media queries are used to either display the screenshots beside their associated blurb or above it.
 
 Several resolutions of the portrait images and screenshots are hosted, and the "srcset" html attribute is used to allow the browser to choose the smallest version of each image that will display at adequate resolution, depending on the viewport size. This is aimed at minimizing load time.
 
